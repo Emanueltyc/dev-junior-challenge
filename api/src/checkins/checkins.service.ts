@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Check, FindOptionsOrderValue, Repository } from 'typeorm';
+import { FindOptionsOrderValue, Repository } from 'typeorm';
 import { Checkin } from './checkin.entity';
 import { checkinResponseDto } from './dto/checkin-fetch.dto';
 
