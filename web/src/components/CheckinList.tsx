@@ -21,7 +21,7 @@ export default function CheckinList({ checkinsList }: CheckinListProps) {
                 <TableRow>
                     <TableHead>cpf</TableHead>
                     <TableHead>nome</TableHead>
-                    <TableHead>data de check-in</TableHead>
+                    <TableHead>data</TableHead>
                 </TableRow>
             </TableHeader>
             <TableBody>

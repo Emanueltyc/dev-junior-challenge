@@ -11,11 +11,18 @@ export default function Home() {
     }, []);
 
     return (
-        <main className="px-20 py-10 text-center space-y-20">
+        <main className="flex flex-col px-20 py-10 text-center gap-20 items-center">
             <h1 className="text-5xl text-red">Check-in</h1>
-            {checkinListResponse?.checkins.length && (
-                <CheckinList checkinsList={checkinListResponse} />
-            )}
+
+            <div className="w-m space-y-5">
+                <h3 className="text-xl">Fila de Check-in</h3>
+
+                <div className="bg-blue-300">
+                    {checkinListResponse?.checkins.length && (
+                        <CheckinList checkinsList={checkinListResponse} />
+                    )}
+                </div>
+            </div>
         </main>
     );
 }
