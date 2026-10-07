@@ -29,6 +29,7 @@ services:
     environment:
       CADASTRO_URL: http://mock-service:4000
       DATABASE_URL: postgres://desafio:desafio@db:5432/checkin
+      ORIGIN: http://localhost:5173
     ports:
       - "3000:3000"
     volumes:
