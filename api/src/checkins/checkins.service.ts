@@ -35,7 +35,7 @@ export class CheckinsService {
     async fetch(
         limit = 10,
         offset = 0,
-        order: FindOptionsOrderValue = 'DESC',
+        order: FindOptionsOrderValue = 'ASC',
     ): Promise<checkinResponseDto> {
         limit = Math.min(limit, 100);
 
