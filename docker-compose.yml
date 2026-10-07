@@ -24,15 +24,18 @@ services:
   # A URL do serviço externo, a partir da sua api, é http://mock-service:4000
   # (nome do serviço na rede do compose).
   #
-  # api:
-  #   build: ./api
-  #   environment:
-  #     CADASTRO_URL: http://mock-service:4000
-  #     # DATABASE_URL: postgres://desafio:desafio@db:5432/checkin  (se usar banco)
-  #   ports:
-  #     - "3000:3000"
-  #   depends_on:
-  #     - mock-service
+  api:
+    build: ./api
+    environment:
+      CADASTRO_URL: http://mock-service:4000
+      DATABASE_URL: postgres://desafio:desafio@db:5432/checkin
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./api:/app
+      - /app/node_modules
+    depends_on:
+      - mock-service
   #
   # web:
   #   build: ./web
