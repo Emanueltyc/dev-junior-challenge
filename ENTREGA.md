@@ -1,18 +1,34 @@
-# Entrega — [seu nome]
+# Entrega — José Emanuel de Oliveira Sousa
 
 > Preencha este arquivo. Ele nos ajuda a rodar e entender o seu projeto.
 
 ## Como rodar
-_Passo a passo para subir o back-end e o front-end na minha máquina._
+
+```bash
+git clone git@github.com:Emanueltyc/dev-junior-challenge.git
+cd dev-junior-challenge
+docker compose up --build -d
+```
 
 ## O que foi feito
-_Resumo do que está funcionando._
+
+Api em Nest + TypeScript
+PostgreSQL para persistência de dados
+Um teste unitário simples para a criação de check-in
+Frontend em React + Vite
+Shadcn + Tailwindcss
+Docker
 
 ## Onde guardei os dados
-_Usei banco de dados ou memória? Por quê?_
+
+Utilizei o banco de dados PostgreSQL pois já possuo experiência com bancos de dados relacionais e ORMs.
 
 ## Decisões e dificuldades
-_Escolhas que fiz e pontos onde tive dúvida ou dificuldade._
+
+Houveram pontos de dificuldade na configuração do docker e do teste unitário
 
 ## O que faria com mais tempo
-_Próximos passos ou melhorias que ficaram de fora._
+
+Implementaria mais testes para a API, como um teste de busca de check-ins com diversos filtros.
+
+O frontend poderia ser melhorado pensando em um cenário com centenas ou mais de check-ins na fila. Atualmente busca todo o histórico de check-ins, então poderia ser implementado um sistema de filtro melhor.
